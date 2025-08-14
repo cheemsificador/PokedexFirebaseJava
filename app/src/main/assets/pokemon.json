@@ -1,0 +1,33 @@
+[
+  {
+    "number": 6,
+    "name": "Charizard",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png",
+    "types": [
+      "Fire",
+      "Flying"
+    ],
+    "description": "Expulsa fuego tan caliente que funde cualquier cosa.",
+    "hp": 78,
+    "atk": 84,
+    "def": 78,
+    "spAtk": 109,
+    "spDef": 85,
+    "spd": 100
+  },
+  {
+    "number": 25,
+    "name": "Pikachu",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
+    "types": [
+      "Electric"
+    ],
+    "description": "Almacena electricidad en las mejillas y la libera en forma de chispas.",
+    "hp": 35,
+    "atk": 55,
+    "def": 40,
+    "spAtk": 50,
+    "spDef": 50,
+    "spd": 90
+  }
+]

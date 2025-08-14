@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@drawable/fondo_pokemon">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center_horizontal">
+
+        <!-- Imagen del Pokémon -->
+        <ImageView
+            android:id="@+id/pokemonImage"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_marginBottom="12dp"
+            android:contentDescription="Imagen del Pokémon"
+            android:scaleType="centerCrop"
+            android:background="@drawable/fondo_redondo"
+            android:padding="8dp" />
+
+        <!-- Tarjeta con info principal -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/fondo_tarjeta"
+            android:padding="16dp"
+            android:layout_marginBottom="12dp"
+            android:elevation="4dp">
+
+            <TextView
+                android:id="@+id/pokemonName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nombre"
+                android:textStyle="bold"
+                android:textSize="26sp"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/pokemonNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="#000"
+                android:textSize="16sp"
+                android:textColor="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/pokemonDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Descripción del Pokémon"
+                android:textSize="14sp"
+                android:layout_marginTop="8dp"
+                android:gravity="center_horizontal"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+        <!-- Tarjeta con info extra -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/fondo_tarjeta"
+            android:padding="16dp"
+            android:elevation="4dp">
+
+            <TextView
+                android:id="@+id/pokemonGeneration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Generación: ---"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/pokemonHeightWeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Altura: -- | Peso: --"
+                android:textSize="14sp"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/pokemonTypes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tipos: ---"
+                android:textSize="14sp"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/pokemonStats"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Estadísticas: HP, Ataque, Defensa..."
+                android:textSize="14sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
+
