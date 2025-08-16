@@ -13,7 +13,6 @@ public interface PokeApiService {
     @GET("pokemon")
     Call<PokemonListResponse> getPokemonList(@Query("limit") int limit);
 
-    // Método para obtener detalles de un Pokémon por su nombre o id
     @GET("pokemon/{name}")
     Call<Pokemon> getPokemon(@Path("name") String name);
 

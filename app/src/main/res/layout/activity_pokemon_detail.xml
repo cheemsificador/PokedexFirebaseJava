@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
@@ -9,100 +10,120 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp"
         android:gravity="center_horizontal">
 
-        <!-- Imagen del Pokémon -->
+        <!-- Imagen del Pokémon con fondo circular blanco -->
         <ImageView
             android:id="@+id/pokemonImage"
-            android:layout_width="180dp"
-            android:layout_height="180dp"
-            android:layout_marginBottom="12dp"
-            android:contentDescription="Imagen del Pokémon"
-            android:scaleType="centerCrop"
-            android:background="@drawable/fondo_redondo"
-            android:padding="8dp" />
+            android:layout_width="268dp"
+            android:layout_height="243dp"
+            android:background="@drawable/fondo_circularrr"
+            android:contentDescription="@string/pokemon_image" /> <!-- Fondo circular blanco -->
 
-        <!-- Tarjeta con info principal -->
+        <!-- INICIO del cuadro blanco que encierra solo los datos -->
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="388dp"
             android:layout_height="wrap_content"
+            android:background="#FFFFFF"
             android:orientation="vertical"
-            android:background="@drawable/fondo_tarjeta"
-            android:padding="16dp"
-            android:layout_marginBottom="12dp"
-            android:elevation="4dp">
+            android:padding="16dp">
 
+            <!-- Nombre y número -->
             <TextView
                 android:id="@+id/pokemonName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:text="Nombre"
-                android:textStyle="bold"
-                android:textSize="26sp"
-                android:textColor="@android:color/black" />
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/pokemonNumber"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
                 android:text="#000"
-                android:textSize="16sp"
-                android:textColor="@android:color/darker_gray" />
+                android:textSize="18sp" />
 
+            <!-- Línea separadora -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="8dp"
+                android:background="#CCCCCC" />
+
+            <!-- Altura y peso en la misma línea -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/pokemonHeight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:text="Altura: 0.0 m"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/pokemonWeight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <!-- Tipo -->
+            <TextView
+                android:id="@+id/pokemonType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Tipo: "
+                android:textSize="16sp" />
+
+            <!-- Línea separadora -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="8dp"
+                android:background="#CCCCCC" />
+
+            <!-- Descripción -->
             <TextView
                 android:id="@+id/pokemonDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Descripción del Pokémon"
-                android:textSize="14sp"
                 android:layout_marginTop="8dp"
-                android:gravity="center_horizontal"
-                android:textColor="@android:color/black" />
-        </LinearLayout>
+                android:text="Descripción del Pokémon"
+                android:textSize="14sp" />
 
-        <!-- Tarjeta con info extra -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="@drawable/fondo_tarjeta"
-            android:padding="16dp"
-            android:elevation="4dp">
+            <!-- Estadísticas -->
+            <TextView
+                android:id="@+id/pokemonStats"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Estadísticas"
+                android:textSize="14sp" />
 
+            <!-- Generación -->
             <TextView
                 android:id="@+id/pokemonGeneration"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Generación: ---"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                android:layout_marginBottom="4dp" />
-
-            <TextView
-                android:id="@+id/pokemonHeightWeight"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Altura: -- | Peso: --"
-                android:textSize="14sp"
-                android:layout_marginBottom="4dp" />
-
-            <TextView
-                android:id="@+id/pokemonTypes"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Tipos: ---"
-                android:textSize="14sp"
-                android:layout_marginBottom="4dp" />
-
-            <TextView
-                android:id="@+id/pokemonStats"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Estadísticas: HP, Ataque, Defensa..."
+                android:layout_marginTop="8dp"
+                android:text="Generación: "
                 android:textSize="14sp" />
+
         </LinearLayout>
+        <!-- FIN del cuadro blanco -->
 
     </LinearLayout>
 </ScrollView>
-

@@ -22,21 +22,21 @@
             android:adjustViewBounds="true"
             android:scaleType="fitCenter" />
 
-    <EditText
-        android:id="@+id/etEmail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Nuevo Correo"
-        android:inputType="textEmailAddress"
-        android:layout_marginBottom="8dp"/>
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="355dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:hint="Nuevo Correo"
+            android:inputType="textEmailAddress" />
 
-    <EditText
-        android:id="@+id/etPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Contraseña"
-        android:inputType="textPassword"
-        android:layout_marginBottom="8dp"/>
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="351dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:hint="Contraseña"
+            android:inputType="textPassword" />
 
     <ProgressBar
         android:id="@+id/progress"
@@ -45,19 +45,19 @@
         android:visibility="gone"
         android:layout_marginTop="8dp"/>
 
-    <Button
-        android:id="@+id/btnRegister"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Registrar Nueva Cuenta"
-        android:layout_marginBottom="8dp"/>
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="349dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Registrar Nueva Cuenta" />
 
-    <Button
-        android:id="@+id/btnBack"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Ya tengo una cuenta"
-        android:layout_marginBottom="8dp"/>
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="348dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Ya tengo una cuenta" />
 
     </LinearLayout>
 </ScrollView>

@@ -8,13 +8,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Pokedex">
 
-        <!-- Actividad de detalles del Pokémon -->
         <activity android:name=".activities.PokemonDetailActivity" android:exported="true" />
 
-        <!-- Pantalla de registro -->
         <activity android:name=".activities.RegisterActivity" android:exported="true" />
 
-        <!-- Pantalla de login -->
         <activity android:name=".activities.LoginActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,7 +19,6 @@
             </intent-filter>
         </activity>
 
-        <!-- Pantalla principal -->
         <activity android:name=".activities.MainActivity" android:exported="true" />
 
     </application>

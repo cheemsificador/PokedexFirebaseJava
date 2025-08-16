@@ -45,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
 
         apiService = ApiClient.getClient().create(PokeApiService.class);
 
-        // Pedimos la lista completa de 1025 pokemones
         apiService.getPokemonList(1025).enqueue(new Callback<PokemonListResponse>() {
             @Override
             public void onResponse(Call<PokemonListResponse> call, Response<PokemonListResponse> response) {
@@ -58,7 +57,6 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<PokemonListResponse> call, Throwable t) {
-                // Aquí puedes mostrar un mensaje de error o hacer logging
             }
         });
     }

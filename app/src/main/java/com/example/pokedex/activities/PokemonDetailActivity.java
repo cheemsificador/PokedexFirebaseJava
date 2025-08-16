@@ -24,6 +24,7 @@ public class PokemonDetailActivity extends AppCompatActivity {
 
     private ImageView pokemonImage;
     private TextView pokemonName, pokemonNumber, pokemonDescription, pokemonStats, pokemonGeneration;
+    private TextView pokemonHeight, pokemonWeight, pokemonType;
     private PokeApiService service;
 
     @Override
@@ -37,6 +38,9 @@ public class PokemonDetailActivity extends AppCompatActivity {
         pokemonDescription = findViewById(R.id.pokemonDescription);
         pokemonStats = findViewById(R.id.pokemonStats);
         pokemonGeneration = findViewById(R.id.pokemonGeneration);
+        pokemonHeight = findViewById(R.id.pokemonHeight);
+        pokemonWeight = findViewById(R.id.pokemonWeight);
+        pokemonType = findViewById(R.id.pokemonType);
 
         service = ApiClient.getClient().create(PokeApiService.class);
 
@@ -73,10 +77,18 @@ public class PokemonDetailActivity extends AppCompatActivity {
                         pokemonStats.setText("Estadísticas no disponibles");
                     }
 
-                    // Descripción inventada (puedes personalizarla como quieras)
-                    pokemonDescription.setText(createCustomDescription(p));
+                    pokemonHeight.setText("Altura: " + (p.getHeight() / 10.0) + " m | Peso: " + (p.getWeight() / 10.0) + " kg");
 
-                    // Generación estimada por ID (rango básico)
+                    StringBuilder typeText = new StringBuilder();
+                    if (p.getTypes() != null) {
+                        for (Pokemon.TypeSlot typeSlot : p.getTypes()) {
+                            typeText.append(capitalize(typeSlot.getType().getName())).append(" ");
+                        }
+                        pokemonType.setText("Tipo: " + typeText.toString().trim());
+                    }
+
+
+                    pokemonDescription.setText(createCustomDescription(p));
                     pokemonGeneration.setText("Generación: " + getGenerationById(p.getId()));
 
                 } else {
@@ -92,8 +104,6 @@ public class PokemonDetailActivity extends AppCompatActivity {
     }
 
     private String createCustomDescription(Pokemon p) {
-        // Aquí puedes generar una descripción basada en nombre, tipos, stats, etc.
-        // Por ejemplo:
         return "El Pokémon " + capitalize(p.getName()) + " es fuerte y resistente. ¡Prepárado para la batalla!";
     }
 
@@ -115,3 +125,4 @@ public class PokemonDetailActivity extends AppCompatActivity {
         return text.substring(0, 1).toUpperCase() + text.substring(1);
     }
 }
+
